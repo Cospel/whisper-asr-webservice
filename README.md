@@ -19,6 +19,21 @@ Current release (v1.9.1) supports following whisper models:
 
 ## Quick Usage
 
+
+### BUILD and RUN locally
+
+```
+docker build --platform linux/amd64 -t my-whisper-app .
+```
+
+```shell
+docker run  --platform linux/amd64 \
+  -p 9000:9000 \
+  -e ASR_MODEL=base \
+  -e ASR_ENGINE=openai_whisper \
+  my-whisper-app
+```
+
 ### CPU
 
 ```shell
